@@ -1,0 +1,28 @@
+[project]
+name = "freecad-macros"
+version = "0.1.0"
+description = "Various FreeCAD macros."
+readme = "README.md"
+# This needs to match FreeCAD's version of Python.
+requires-python = "~=3.11.0"
+dependencies = []
+
+[tool.pyright]
+typeCheckingMode = "standard"
+extraPaths = [
+  # macOS
+  "/Applications/FreeCAD.app/Contents/Resources/lib/",
+  "/Applications/FreeCAD.app/Contents/Resources/lib/python3.11/site-packages/",
+  "/Applications/FreeCAD.app/Contents/Resources/Mod/CAM/",
+]
+# For convenience.
+reportRedeclaration = false
+reportUnreachable = false
+reportUnusedParameter = false
+
+# FreeCAD has issues with imports and types.
+reportUnusedImport = false
+reportMissingImports = false
+
+[tool.ruff]
+extend = "~/.ruff.toml"
