@@ -11,8 +11,10 @@ if TYPE_CHECKING:
     import Gui
 
 
-# TODO: Implement
+# TODO: Implement.
 class UserMacro:
+    """Zero the transforms of an imported model."""
+
     @staticmethod
     def run() -> None:
         # >>> App.getDocument('FuseHolder_Littelfuse_03540002ZXGY').addObject('Part::Refine','Part__Feature016')

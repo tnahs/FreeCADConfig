@@ -1,0 +1,76 @@
+[[macro]]
+file = "ExportDrawingsIso5457Minimal.py"
+name = "ExportDrawingsIso5457Minimal"
+tooltip = "Export drawings using the ISO5457 minimal template."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "ExportSpreadsheet.py"
+name = "ExportSpreadsheet"
+tooltip = "Export the selected cells to a CSV file."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "ForceRecompute.py"
+name = "ForceRecompute"
+tooltip = "Force recompute all objects."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "PrintExternalGeometry.py"
+name = "PrintExternalGeometry"
+tooltip = "Print external geometries for selected sketch."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "QuickInspect.py"
+name = "QuickInspect"
+tooltip = "Define vairables for quick object inspection."
+icon = ""
+shortcut = "Q,I"
+
+[[macro]]
+file = "SearchAndReplaceCellContents.py"
+name = "SearchAndReplaceCellContents"
+tooltip = "Replace the selected cells' contents using a regex pattern."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "SearchAndReplaceLabels.py"
+name = "SearchAndReplaceLabels"
+tooltip = "Rename the selected objects using a regex pattern."
+icon = ""
+shortcut = ""
+
+[[macro]]
+file = "SetViewObjectProjection.py"
+name = "SetViewObjectProjection"
+tooltip = "Set the line weight and point size for all objects in the active Drawing."
+icon = ""
+shortcut = "Q,P"
+
+[[macro]]
+file = "SetViewObjectViewport.py"
+name = "SetViewObjectViewport"
+tooltip = "Set the color and line weight for all or selected objects."
+icon = ""
+shortcut = "Q,R"
+
+[[macro]]
+file = "ToggleConsoles.py"
+name = "ToggleConsoles"
+tooltip = "Toggle the Python and Report panels."
+icon = ""
+shortcut = "Q,C"
+
+[[macro]]
+file = "ZeroTransforms.py"
+name = "ZeroTransforms"
+tooltip = "Zero the transforms of an imported model."
+icon = ""
+shortcut = ""

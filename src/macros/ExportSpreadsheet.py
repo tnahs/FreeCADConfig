@@ -15,27 +15,11 @@ if TYPE_CHECKING:
     import FreeCADGui
 
 
-def cell_to_index(cell: str) -> tuple[int, int]:
-    match = re.match(r"([A-Z]+)(\d+)", cell)
-    if not match:
-        raise ValueError(f"Invalid cell format: {cell}")
-    col_str, row_str = match.groups()
-    col = (
-        sum(
-            (ord(char) - ord("A") + 1) * (26**i)
-            for i, char in enumerate(reversed(col_str))
-        )
-        - 1
-    )
-    row = int(row_str) - 1
-    return row, col
-
-
 class UserMacro:
+    """Export the selected cells to a CSV file."""
+
     @staticmethod
     def run(cell_range: str, output_filepath: Path) -> None:
-        """Export the selected cells to a CSV file."""
-
         main_window = FreeCADGui.getMainWindow()
         mdi_area = main_window.findChild(QtGui.QMdiArea)
 
@@ -88,6 +72,23 @@ class UserMacro:
         print(f"Exported spreadsheet to {output_filepath}")
 
 
+def cell_to_index(cell: str) -> tuple[int, int]:
+    match = re.match(r"([A-Z]+)(\d+)", cell)
+    if not match:
+        raise ValueError(f"Invalid cell format: {cell}")
+    col_str, row_str = match.groups()
+    col = (
+        sum(
+            (ord(char) - ord("A") + 1) * (26**i)
+            for i, char in enumerate(reversed(col_str))
+        )
+        - 1
+    )
+    row = int(row_str) - 1
+    return row, col
+
+
+# TODO: Build GUI.
 UserMacro().run(
     cell_range="",
     output_filepath=Path.cwd(),

@@ -1,7 +1,7 @@
 [project]
-name = "freecad-macros"
+name = "FreeCADConfig"
 version = "0.1.0"
-description = "Various FreeCAD macros."
+description = "Configure FreeCAD with Python and TOML"
 readme = "README.md"
 # This needs to match FreeCAD's version of Python.
 requires-python = "~=3.11.0"

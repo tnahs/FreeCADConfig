@@ -11,6 +11,8 @@ if TYPE_CHECKING:
 
 
 class UserMacro:
+    """Force recompute all objects."""
+
     @staticmethod
     def run() -> None:
         document = FreeCAD.ActiveDocument

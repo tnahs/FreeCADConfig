@@ -14,9 +14,11 @@ if TYPE_CHECKING:
 
 
 class UserMacro:
+    """Replace the selected cells' contents using a regex pattern."""
+
     @staticmethod
     def run(pattern: str, replace: str, dry_run: bool = True) -> None:
-        """Replace the selected cells' contents using a regex pattern.
+        """Run macro.
 
         Args:
             find: Regex pattern.
@@ -83,4 +85,5 @@ dry_run = False
 # pattern = r"^(.*)$"
 # replace = r"prefix_\1_suffix"
 
+# TODO: Build GUI.
 UserMacro().run(pattern, replace, dry_run)

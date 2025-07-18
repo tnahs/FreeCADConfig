@@ -1,0 +1,19 @@
+# Themes
+
+[[addon]]
+name = "OpenTheme"
+url = "https://github.com/obelisk79/OpenTheme"
+
+# Workbenches
+
+[[addon]]
+name = "CurvesWorkbench"
+url = "https://github.com/tomate44/CurvesWB"
+
+[[addon]]
+name = "SheetMetalWorkbench"
+url = "https://github.com/shaise/FreeCAD_SheetMetal"
+
+[[addon]]
+name = "FastenersWorkbench"
+url = "https://github.com/shaise/FreeCAD_FastenersWB"

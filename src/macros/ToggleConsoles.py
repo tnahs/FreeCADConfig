@@ -13,6 +13,8 @@ if TYPE_CHECKING:
 
 
 class UserMacro:
+    """Toggle the Python and Report panels."""
+
     @staticmethod
     def run() -> None:
         main_window = FreeCADGui.getMainWindow()

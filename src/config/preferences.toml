@@ -1,0 +1,522 @@
+# Workbenches ------------------------------------------------------------------
+
+
+[[preference]]
+path = "BaseApp/Preferences/Workbenches/WorkbenchSelectorType"
+value = 1
+
+[[preference]]
+path = "BaseApp/Preferences/General/AutoloadModule"
+value = "SketcherWorkbench"
+
+[[preference]]
+path = "BaseApp/Preferences/General/BackgroundAutoloadModules"
+value = [
+  "SketcherWorkbench",
+  "PartDesignWorkbench",
+  # ...
+]
+
+[[preference]]
+path = "BaseApp/Preferences/General/LockToolBars"
+value = 1
+
+[[preference]]
+path = "BaseApp/Preferences/Workbenches/Ordered"
+value = [
+  "SketcherWorkbench",
+  "SpreadsheetWorkbench",
+  "DraftWorkbench",
+  "PartDesignWorkbench",
+  "PartWorkbench",
+  "CurvesWorkbench",
+  "SurfaceWorkbench",
+  "SMWorkbench",
+  "TechDrawWorkbench",
+  "CAMWorkbench",
+  "AssemblyWorkbench",
+  "FastenersWorkbench",
+]
+
+[[preference]]
+path = "BaseApp/Preferences/Workbenches/Disabled"
+value = [
+  "BIMWorkbench",
+  "FemWorkbench",
+  "InspectionWorkbench",
+  "MaterialWorkbench",
+  "MeshWorkbench",
+  "OpenSCADWorkbench",
+  "PointsWorkbench",
+  "ReverseEngineeringWorkbench",
+  "RobotWorkbench",
+  "TestWorkbench",
+  "NoneWorkbench",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SketcherWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SketcherWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Sketcher edit mode",
+  "Sketcher geometries",
+  "Sketcher constraints",
+  "Sketcher tools",
+  "Sketcher B-spline tools",
+  "Sketcher visual",
+  "Sketcher edit tools",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SpreadsheetWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SpreadsheetWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Spreadsheet",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/DraftWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/DraftWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Draft tray",
+  "Draft creation tools",
+  "Draft annotation tools",
+  "Draft modification tools",
+  "Break",
+  "Draft utility tools",
+  "Draft snap",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/PartDesignWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/PartDesignWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Part Design Helper",
+  "Part Design Modeling",
+  "Part Design Dressup",
+  "Part Design Patterns",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/PartWorkbench/Saved"
+value = true
+
+# TODO
+[[preference]]
+path = "Tux/PersistentToolbars/User/PartWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Solids",
+  "Part tools",
+  "Boolean",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/CurvesWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/CurvesWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Curves",
+  "Surfaces",
+  "Misc.",
+]
+
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SurfaceWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SurfaceWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  "Surface",
+  # Workbench
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SMWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/SMWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Sheet Metal",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/TechDrawWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/TechDrawWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "TechDraw Pages",
+  "TechDraw Views",
+  "TechDraw Stacking",
+  "TechDraw Dimensions",
+  "TechDraw Attributes",
+  "TechDraw Centerlines",
+  "TechDraw Extend Dimensions",
+  "TechDraw File Access",
+  "TechDraw Decoration",
+  "TechDraw Annotation",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/CAMWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/CAMWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Project Setup",
+  "Tool Commands",
+  "New Operations",
+  "Path Modification",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/FastenersWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "FS Commands",
+  "Misc head",
+  "Hex head",
+  "Hexagon socket",
+  "Hexalobular socket",
+  "Break",
+  "Slotted",
+  "Thumb screws",
+  "Ground screws",
+  "Nut",
+  "Break",
+  "Pins",
+  "T-Slot Fasteners",
+  "Washer",
+  "ThreadedRod",
+  "Inserts",
+  "Break",
+  "Retaining Rings",
+  "H cross",
+  "Set screws",
+  "Nails",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/AssemblyWorkbench/Saved"
+value = true
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/AssemblyWorkbench/Top"
+value = [
+  # Defaults
+  "Break",
+  "File",
+  "Edit",
+  "Workbench",
+  "FreeCADConfig",
+  "Break",
+  "Structure",
+  # Workbench
+  "Assembly",
+  "Assembly Joints",
+]
+
+[[preference]]
+path = "Tux/PersistentToolbars/User/FastenersWorkbench/Saved"
+value = true
+
+
+# Windows/Dockables ------------------------------------------------------------
+
+
+[[preference]]
+path = "BaseApp/MainWindow/DockWindows/OverlayLeft/Widgets"
+value = ["Tree view"]
+
+[[preference]]
+path = "BaseApp/MainWindow/DockWindows/OverlayLeft/Transparent"
+value = true
+
+
+[[preference]]
+path = [
+  "BaseApp/MainWindow/DockWindows/Std_ComboView",
+  "BaseApp/MainWindow/DockWindows/Std_PropertyView",
+  "BaseApp/MainWindow/DockWindows/Std_PythonView",
+  "BaseApp/MainWindow/DockWindows/Std_ReportView",
+  "BaseApp/MainWindow/DockWindows/Std_TaskView",
+  "BaseApp/MainWindow/DockWindows/Std_TreeView",
+]
+value = true
+
+[[preference]]
+path = "BaseApp/Preferences/TreeView/FontSize"
+value = 13
+
+[[preference]]
+path = [
+  "BaseApp/MainWindow/Toolbars/File",
+  "BaseApp/MainWindow/Toolbars/Edit",
+  #...
+]
+value = true
+
+[[preference]]
+path = [
+  "BaseApp/MainWindow/Toolbars/Clipboard",
+  "BaseApp/MainWindow/Toolbars/Macro",
+  "BaseApp/MainWindow/Toolbars/View",
+  "BaseApp/MainWindow/Toolbars/Help",
+]
+value = false
+
+
+# Windows/Dockables - Independent/Combined Panels ------------------------------
+
+# These settings need to be combined to maintain a working GUI. If one
+# is set to true then the other must be false. Otherwise, the GUI shows
+# neither the `Model` nor the `Tree` view. These settings are mimicing the
+# `Independent/Combined` drop-down found in Preferences/General.
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/DockWindows/PropertyView/Enabled",
+  "BaseApp/Preferences/DockWindows/TreeView/Enabled",
+
+]
+value = true
+
+[[preference]]
+path = "BaseApp/Preferences/DockWindows/ComboView/Enabled"
+value = false
+
+
+# Viewports --------------------------------------------------------------------
+
+
+[[preference]]
+path = "BaseApp/Preferences/View/NavigationStyle"
+value = "Gui::TouchpadNavigationStyle"
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/View/HighlightColor",
+  "BaseApp/Preferences/View/SelectionColor",
+]
+value = 640962815
+
+[[preference]]
+path = "BaseApp/Preferences/View/AntiAliasing"
+value = 3
+
+[[preference]]
+path = "BaseApp/Preferences/View/TransparentObjectRenderType"
+value = 1
+
+[[preference]]
+path = "BaseApp/Preferences/Mod/Part/MeshDeviation"
+value = 0.5
+
+[[preference]]
+path = "BaseApp/Preferences/Mod/Part/MeshAngularDeflection"
+value = 5.0
+
+[[preference]]
+path = "BaseApp/Preferences/View/CornerCoordSystem"
+value = true
+
+[[preference]]
+path = "BaseApp/Preferences/View/CornerCoordSystemSize"
+value = 12
+
+[[preference]]
+path = "BaseApp/Preferences/NaviCube/CubeSize"
+value = 128
+
+[[preference]]
+path = "BaseApp/Preferences/NaviCube/CornerNaviCube"
+value = 2
+
+# Bezier Spline Visualizers ----------------------------------------------------
+
+[[preference]]
+path = "BaseApp/Preferences/Mod/Sketcher/General/BSplineControlPolygonVisible"
+value = true
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/Mod/Sketcher/General/BSplineDegreeVisible",
+  "BaseApp/Preferences/Mod/Sketcher/General/BSplineCombVisible",
+  "BaseApp/Preferences/Mod/Sketcher/General/BSplineKnotMultiplicityVisible",
+  "BaseApp/Preferences/Mod/Sketcher/General/BSplinePoleWeightVisible",
+]
+value = false
+
+
+# Report/Notifications ---------------------------------------------------------
+
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/OutputWindow/RedirectPythonOutput",
+  "BaseApp/Preferences/OutputWindow/RedirectPythonErrors",
+  "BaseApp/Preferences/OutputWindow/checkMessage",
+  "BaseApp/Preferences/OutputWindow/checkLogging",
+  "BaseApp/Preferences/OutputWindow/checkWarning",
+  "BaseApp/Preferences/OutputWindow/checkShowReportViewOnWarning",
+  "BaseApp/Preferences/OutputWindow/checkShowReportViewOnError",
+  "BaseApp/Preferences/OutputWindow/checkShowReportViewOnNormalMessage",
+  "BaseApp/Preferences/OutputWindow/checkShowReportViewOnLogMessage",
+  "BaseApp/Preferences/OutputWindow/checkShowReportTimecode",
+  "BaseApp/Preferences/NotificationArea/NotificationAreaEnabled",
+]
+value = false
+
+[[preference]]
+path = "BaseApp/Preferences/OutputWindow/checkError"
+value = true
+
+
+# Misc -------------------------------------------------------------------------
+
+
+[[preference]]
+path = "BaseApp/Preferences/Units/Deimals"
+value = 3
+
+[[preference]]
+path = "BaseApp/Preferences/Mod/Sketcher/LeaveSketchWithEscape"
+value = false
+
+[[preference]]
+path = "BaseApp/Preferences/Units/Decimals"
+value = 2
+
+[[preference]]
+path = "BaseApp/Preferences/Editor/FontSize"
+value = 14
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/RecentFiles/RecentFiles",
+  "BaseApp/Preferences/RecentMacros/RecentMacros",
+]
+value = 0
+
+[[preference]]
+path = [
+  "BaseApp/Preferences/Mod/Start/ShowOnStartup",
+  "BaseApp/Preferences/Mod/Start/FirstStart2024",
+]
+value = false

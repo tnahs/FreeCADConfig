@@ -12,6 +12,8 @@ if TYPE_CHECKING:
 
 
 class UserMacro:
+    """Print external geometries for selected sketch."""
+
     TYPE_ID_SKETCH = "Sketcher::SketchObject"
 
     def run(self, label: str | None = None) -> None:

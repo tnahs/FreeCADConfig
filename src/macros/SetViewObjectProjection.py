@@ -14,6 +14,8 @@ document = FreeCAD.ActiveDocument
 
 
 class UserMacro:
+    """Set the line weight and point size for all objects in the active Drawing."""
+
     TARGET_TYPE_ID = "TechDraw::DrawProjGroupItem"
 
     def run(self) -> None:

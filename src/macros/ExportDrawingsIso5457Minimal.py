@@ -20,6 +20,82 @@ if TYPE_CHECKING:
     DrawPageProxy = Any
 
 
+class UserMacro:
+    """Export drawings using the ISO5457 minimal template."""
+
+    TARGET_TYPE_ID = "TechDraw::DrawPage"
+
+    def run(
+        self,
+        page_data: PageData,
+        output_directory: Path,
+        revision: str,
+        date_format: str | None = None,
+    ) -> None:
+        objects = Gui.Selection.getSelection() or FreeCAD.activeDocument().Objects
+        pages = [obj for obj in objects if obj.TypeId == self.TARGET_TYPE_ID]
+        pages = sorted(pages, key=lambda p: p.Label)
+
+        if not pages:
+            print("Found no pages to export!")
+            return
+
+        print(f"Found {len(pages)} pages to export!")
+
+        if date_format:
+            page_data.set_date_format(date_format)
+        page_data.set_revision(revision)
+        page_data.set_page_count(len(pages))
+
+        self.force_recompute_document()
+
+        self.export_drawings(pages, page_data, output_directory)
+
+        print("Export Complete!")
+
+    def export_drawings(
+        self,
+        pages: list[DrawPageProxy],
+        page_data: PageData,
+        output_directory: Path,
+    ) -> None:
+        output_directory.mkdir(parents=True, exist_ok=True)
+
+        for page_number, page in enumerate(pages, start=1):
+            # FreeCAD has a bug where only the active Page is exported. Calling
+            # `doubleClicked` activates the Page.
+            page.ViewObject.doubleClicked()
+
+            page_data.set_page_field_data(page, page_number)
+
+            path = output_directory / f"{page.Label}.pdf"
+
+            print(f"Exporting '{page.Label}' to {path}...")
+
+            self.export_page(page, path)
+
+            page_data.clear_page_mutable_field_data(page)
+
+    @staticmethod
+    def export_page(page: str, path: Path) -> None:
+        path = str(path)  # pyright: ignore [reportAssignmentType]
+
+        if hasattr(FreeCADGui, "exportOptions"):
+            options = FreeCADGui.exportOptions(path)
+            FreeCADGui.export([page], path, options)
+        else:
+            FreeCADGui.export([page], path)
+
+    @staticmethod
+    def force_recompute_document() -> None:
+        document = FreeCAD.activeDocument()
+
+        for obj in document.Objects:
+            obj.touch()
+
+        document.recompute()
+
+
 class PageData:
     _revision: str | int = ""
     _page_count: int = 0
@@ -110,88 +186,10 @@ class PageDataIso5457(PageData):
         return self.date.strftime(self._date_format)
 
 
-class UserMacro:
-    TARGET_TYPE_ID = "TechDraw::DrawPage"
+output_directory = Path(FreeCAD.activeDocument().FileName)
 
-    def run(
-        self,
-        page_data: PageData,
-        output_directory: Path,
-        revision: str,
-        date_format: str | None = None,
-    ) -> None:
-        objects = Gui.Selection.getSelection() or FreeCAD.activeDocument().Objects
-        pages = [obj for obj in objects if obj.TypeId == self.TARGET_TYPE_ID]
-        pages = sorted(pages, key=lambda p: p.Label)
-
-        if not pages:
-            print("Found no pages to export!")
-            return
-
-        print(f"Found {len(pages)} pages to export!")
-
-        if date_format:
-            page_data.set_date_format(date_format)
-        page_data.set_revision(revision)
-        page_data.set_page_count(len(pages))
-
-        self.force_recompute_document()
-
-        self.export_drawings(pages, page_data, output_directory)
-
-        print("Export Complete!")
-
-    def export_drawings(
-        self,
-        pages: list[DrawPageProxy],
-        page_data: PageData,
-        output_directory: Path,
-    ) -> None:
-        output_directory.mkdir(parents=True, exist_ok=True)
-
-        for page_number, page in enumerate(pages, start=1):
-            # FreeCAD has a bug where only the active Page is exported. Calling
-            # `doubleClicked` activates the Page.
-            page.ViewObject.doubleClicked()
-
-            page_data.set_page_field_data(page, page_number)
-
-            path = output_directory / f"{page.Label}.pdf"
-
-            print(f"Exporting '{page.Label}' to {path}...")
-
-            self.export_page(page, path)
-
-            page_data.clear_page_mutable_field_data(page)
-
-    @staticmethod
-    def export_page(page: str, path: Path) -> None:
-        path = str(path)  # pyright: ignore [reportAssignmentType]
-
-        if hasattr(FreeCADGui, "exportOptions"):
-            options = FreeCADGui.exportOptions(path)
-            FreeCADGui.export([page], path, options)
-        else:
-            FreeCADGui.export([page], path)
-
-    @staticmethod
-    def force_recompute_document() -> None:
-        document = FreeCAD.activeDocument()
-
-        for obj in document.Objects:
-            obj.touch()
-
-        document.recompute()
-
-
-# ---
-
-
-path_document = Path(FreeCAD.activeDocument().FileName)
-
-output_directory = path_document
-
-macro = UserMacro().run(
+# TODO: Build GUI.
+UserMacro().run(
     PageDataIso5457(
         approval_person="N/A",
         creator="N/A",

@@ -24,6 +24,8 @@ if TYPE_CHECKING:
 
 
 class UserMacro:
+    """Set the color and line weight for all or selected objects."""
+
     # Default FreeCAD color as floats.
     DEFAULT_DIFFUSE_COLOR: Color4f = (
         0.44705,  # 114
@@ -49,7 +51,7 @@ class UserMacro:
         retain_diffuse_color: bool = True,
         enable_auto_color: bool = True,
     ) -> None:
-        """Sets the color of selected or all objects to a consistent material.
+        """Run macro.
 
         Args:
             diffuse_color: Set all target objects to this color. A value of `None` will

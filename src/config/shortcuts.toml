@@ -1,0 +1,15 @@
+[[shortcut]]
+command = "Std_DlgCustomize"
+shortcut = "Q, Q"
+
+[[shortcut]]
+command = "Std_Delete"
+shortcut = "Q, D"
+
+[[shortcut]]
+command = "Sketcher_LeaveSketch"
+shortcut = "Q, Esc"
+
+[[shortcut]]
+command = "Std_ViewHome"
+shortcut = "V, H"
