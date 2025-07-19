@@ -410,6 +410,10 @@ path = "BaseApp/Preferences/View/NavigationStyle"
 value = "Gui::TouchpadNavigationStyle"
 
 [[preference]]
+path = "BaseApp/Preferences/View/OrbitStyle"
+value = 2
+
+[[preference]]
 path = [
   "BaseApp/Preferences/View/HighlightColor",
   "BaseApp/Preferences/View/SelectionColor",
