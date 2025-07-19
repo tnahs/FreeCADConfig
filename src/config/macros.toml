@@ -17,7 +17,7 @@ file = "ForceRecompute.py"
 name = "ForceRecompute"
 tooltip = "Force recompute all objects."
 icon = ""
-shortcut = ""
+shortcut = "Q,F"
 
 [[macro]]
 file = "PrintExternalGeometry.py"
