@@ -2,7 +2,9 @@
 
 - add documentation
 - add icons
-- use FreeCAD's dialogs to emit errors
+  - https://pictogrammers.com/library/mdi/
+  - https://fontawesome.com/search
+- should we install this into `$HOME`?
 - add GUI to macros
 - add UI-only macros
   - export step with color

@@ -36,6 +36,10 @@ run_install_addons(PATH_CONFIG_ROOT, reinstall=False)
 run_install_configs(PATH_CONFIG_ROOT)
 ```
 
+## Useful Links
+
+- <https://wiki.freecad.org/Code_snippets>
+
 [addons]: ./src/config/addons.toml
 [macros]: ./src/config/macros.toml
 [shortcuts]: ./src/config/shortcuts.toml
