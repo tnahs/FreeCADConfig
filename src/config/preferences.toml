@@ -505,7 +505,7 @@ value = false
 
 [[preference]]
 path = "BaseApp/Preferences/Units/Decimals"
-value = 2
+value = 3
 
 [[preference]]
 path = "BaseApp/Preferences/Editor/FontSize"

@@ -11,5 +11,9 @@ command = "Sketcher_LeaveSketch"
 shortcut = "Q, Esc"
 
 [[shortcut]]
+command = "Sketcher_CreateLine"
+shortcut = "G, F"
+
+[[shortcut]]
 command = "Std_ViewHome"
 shortcut = "V, H"
