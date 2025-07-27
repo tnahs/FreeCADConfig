@@ -19,5 +19,13 @@ command = "Sketcher_CreateLine"
 shortcut = "G, F"
 
 [[shortcut]]
+command = "Sketcher_Create3PointArc"
+shortcut = "G, F"
+
+[[shortcut]]
+command = "Sketcher_CreateArc"
+shortcut = ""
+
+[[shortcut]]
 command = "Std_ViewHome"
 shortcut = "V, H"

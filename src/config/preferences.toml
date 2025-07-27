@@ -494,9 +494,12 @@ value = true
 
 # Misc -------------------------------------------------------------------------
 
+[[preference]]
+path = "BaseApp/Preferences/Document/MaxUndoSize"
+value = 99
 
 [[preference]]
-path = "BaseApp/Preferences/Units/Deimals"
+path = "BaseApp/Preferences/Units/Decimals"
 value = 3
 
 [[preference]]
