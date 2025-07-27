@@ -11,6 +11,10 @@ command = "Sketcher_LeaveSketch"
 shortcut = "Q, Esc"
 
 [[shortcut]]
+command = "Sketcher_ViewSection"
+shortcut = "Q, S"
+
+[[shortcut]]
 command = "Sketcher_CreateLine"
 shortcut = "G, F"
 
